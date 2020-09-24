@@ -75,16 +75,26 @@
       align-items: center;
 
       h4 {
-        margin: 0 0 0 10px;
+        margin: 0 5px 0 10px;
+        color: #474748;
+        font-weight: 600;
+      }
+
+      &__avatar {
+        height: 28px !important;
+        width: 28px !important;
       }
     }
 
     &__box {
       background-color: #e4e6eb !important;
-      // height: 41px;
-      // width: 41px;
-      // border-radius: 50%;
+      height: 40px !important;
+      width: 40px !important;
       margin: 0 0 0 10px !important;
+
+      .MuiSvgIcon-root {
+        color: #050505;
+      }
     }
   }
 }

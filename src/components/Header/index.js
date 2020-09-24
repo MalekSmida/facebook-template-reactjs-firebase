@@ -1,14 +1,14 @@
 import React from "react";
 import "./index.scss";
-import HomeIcon from "@material-ui/icons/Home";
-import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
-import PeopleIcon from "@material-ui/icons/People";
-import WebIcon from "@material-ui/icons/Web";
-import AddIcon from "@material-ui/icons/Add";
-import ChatIcon from "@material-ui/icons/Chat";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import SearchIcon from "@material-ui/icons/Search";
+import HomeIcon from "@material-ui/icons/HomeRounded";
+import OndemandVideoIcon from "@material-ui/icons/OndemandVideoRounded";
+import PeopleIcon from "@material-ui/icons/PeopleRounded";
+import WebIcon from "@material-ui/icons/WebRounded";
+import AddIcon from "@material-ui/icons/AddRounded";
+import ChatIcon from "@material-ui/icons/ChatRounded";
+import NotificationsIcon from "@material-ui/icons/NotificationsRounded";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDownRounded";
+import SearchIcon from "@material-ui/icons/SearchRounded";
 import { Avatar, IconButton } from "@material-ui/core";
 
 function Header() {
@@ -41,6 +41,7 @@ function Header() {
       <div className="header__right">
         <div className="header__right__info">
           <Avatar
+            className="header__right__info__avatar"
             alt="Malek Smida"
             src="https://scontent.ftun6-1.fna.fbcdn.net/v/t1.0-9/83020011_725652291572674_1450846223241052160_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=n2Zeto3D8qkAX-9jz7Q&_nc_ht=scontent.ftun6-1.fna&oh=df464cdbcb44b26d2924642c597b63c8&oe=5F8D5D6B"
           />

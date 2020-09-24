@@ -1,0 +1,28 @@
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 0 0 0 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e4e6e9;
+    border-radius: 10px;
+  }
+
+  &__avatar {
+    height: 28px !important;
+    width: 28px !important;
+  }
+
+  h4 {
+    color: #3f3f3f;
+    font-weight: 600;
+    margin: 0 0 0 12px;
+  }
+
+  .MuiSvgIcon-root {
+    color: #1877f2;
+    font-size: xx-large;
+  }
+}
