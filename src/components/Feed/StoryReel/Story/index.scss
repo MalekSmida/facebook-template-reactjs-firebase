@@ -1,0 +1,31 @@
+.story {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 0 8px 0 0;
+  box-shadow: 0 5px 17px -7px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: transform 100ms ease-in; //prepare for animation
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &__avatar {
+    margin: 10px;
+    border: 5px solid #1877f2;
+    height: 34px !important;
+    width: 34px !important;
+  }
+
+  h4 {
+    position: absolute; // absolute within the relative parent component
+    bottom: 7px;
+    left: 10px;
+    color: white;
+  }
+}
