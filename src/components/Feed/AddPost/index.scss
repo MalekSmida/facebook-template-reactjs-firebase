@@ -1,0 +1,13 @@
+.addPost {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    display: flex;
+  }
+
+  &__media {
+    display: flex;
+    justify-content: space-between;
+  }
+}
