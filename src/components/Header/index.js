@@ -10,8 +10,10 @@ import NotificationsIcon from "@material-ui/icons/NotificationsRounded";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDownRounded";
 import SearchIcon from "@material-ui/icons/SearchRounded";
 import { Avatar, IconButton } from "@material-ui/core";
+import { useStateValue } from "../../context/StateProvider";
 
 function Header() {
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="header">
       <div className="header__left">
@@ -43,9 +45,9 @@ function Header() {
           <Avatar
             className="header__right__info__avatar"
             alt="Malek Smida"
-            src="https://scontent.ftun6-1.fna.fbcdn.net/v/t1.0-9/83020011_725652291572674_1450846223241052160_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=n2Zeto3D8qkAX-9jz7Q&_nc_ht=scontent.ftun6-1.fna&oh=df464cdbcb44b26d2924642c597b63c8&oe=5F8D5D6B"
+            src={user.photoURL}
           />
-          <h4>Malek</h4>
+          <h4>{user.displayName}</h4>
         </div>
         <IconButton className="header__right__box">
           <AddIcon />

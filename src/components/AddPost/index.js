@@ -4,14 +4,26 @@ import VideocamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import "./index.scss";
+import { useStateValue } from "../../context/StateProvider";
+import db from "../../firebase";
+import firebase from "firebase";
 
 function AddPost() {
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [{ user }, dispatch] = useStateValue();
 
   const handleClick = (e) => {
     e.preventDefault();
-    // db stuff
+
+    db.collection("posts").add({
+      message: input,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      profilePic: user.photoURL,
+      username: user.displayName,
+      image: imageUrl,
+    });
+
     setInput("");
     setImageUrl("");
   };
@@ -20,8 +32,8 @@ function AddPost() {
       <div className="addPost__input">
         <Avatar
           className="addPost__input__avatar"
-          alt="Malek Smida"
-          src="https://scontent.ftun6-1.fna.fbcdn.net/v/t1.0-9/83020011_725652291572674_1450846223241052160_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=n2Zeto3D8qkAX-9jz7Q&_nc_ht=scontent.ftun6-1.fna&oh=df464cdbcb44b26d2924642c597b63c8&oe=5F8D5D6B"
+          alt={user.displayName}
+          src={user.photoURL}
         />
         <form>
           <input
@@ -29,7 +41,7 @@ function AddPost() {
             onChange={(e) => setInput(e.target.value)}
             className="addPost__input__post"
             type="text"
-            placeholder="What's on your mind?"
+            placeholder={`What's on your mind?`}
           />
           <input
             value={imageUrl}
