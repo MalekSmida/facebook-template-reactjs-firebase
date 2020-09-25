@@ -95,6 +95,22 @@
       .MuiSvgIcon-root {
         color: #050505;
       }
+
+      &__chat {
+        .MuiSvgIcon-root {
+          font-size: medium;
+        }
+      }
+      &__notification {
+        .MuiSvgIcon-root {
+          font-size: large;
+        }
+      }
+      &__arrow {
+        .MuiSvgIcon-root {
+          font-size: xx-large;
+        }
+      }
     }
   }
 }

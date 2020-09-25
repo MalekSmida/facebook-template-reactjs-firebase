@@ -50,13 +50,13 @@ function Header() {
         <IconButton className="header__right__box">
           <AddIcon />
         </IconButton>
-        <IconButton className="header__right__box">
+        <IconButton className="header__right__box header__right__box__chat">
           <ChatIcon />
         </IconButton>
-        <IconButton className="header__right__box">
+        <IconButton className="header__right__box header__right__box__notification">
           <NotificationsIcon />
         </IconButton>
-        <IconButton className="header__right__box">
+        <IconButton className="header__right__box header__right__box__arrow">
           <ArrowDropDownIcon />
         </IconButton>
       </div>
