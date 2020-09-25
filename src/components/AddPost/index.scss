@@ -1,0 +1,64 @@
+.addPost {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  margin: 25px 0 0 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px -8px rgba(0, 0, 0, 0.75);
+  width: 80%;
+
+  &__input {
+    display: flex;
+    border-bottom: 1px solid #e4e6eb;
+    padding: 0 0 10px 0;
+
+    &__post {
+      flex: 1;
+    }
+
+    form {
+      flex: 1;
+      display: flex;
+
+      input {
+        border: none;
+        outline-width: 0;
+        border-radius: 999px;
+        background-color: #f0f2f5;
+        padding: 0 20px;
+        margin: 0 0 0 7px;
+      }
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  &__media {
+    display: flex;
+    justify-content: space-evenly;
+
+    &__element {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      margin: 10px 0 0 0;
+
+      h4 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #65676b;
+        margin: 0 0 0 7px;
+      }
+
+      &:hover {
+        border-radius: 10px;
+        background-color: #f2f2f2;
+      }
+    }
+  }
+}

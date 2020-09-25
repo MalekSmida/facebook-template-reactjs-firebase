@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import SidebarRow from "./SidebarRow";
+import SidebarRow from "../SidebarRow";
 import CovidIcon from "@material-ui/icons/FavoriteRounded";
 import FlagOutlinedIcon from "@material-ui/icons/FlagRounded";
 import PeopleAltRoundedIcon from "@material-ui/icons/PeopleAltRounded";
