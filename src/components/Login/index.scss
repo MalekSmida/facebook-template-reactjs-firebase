@@ -1,16 +1,13 @@
 .login {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   height: 100vh;
 
-  &__logo {
-    display: flex;
-    flex-direction: column;
-
-    img {
-      object-fit: contain;
-      width: 100px;
-    }
+  img {
+    object-fit: contain;
+    width: 100px;
   }
 
   button {
