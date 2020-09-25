@@ -34,21 +34,6 @@ function Feed() {
           image={post.data.image}
         />
       ))}
-
-      {/* <Post
-        username={user.displayName}
-        profilePic={user.photoURL}
-        message="Good morning!"
-        timestamp="is 20oclock"
-        image="https://images.unsplash.com/photo-1524678714210-9917a6c619c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80"
-      />
-      <Post
-        username={user.displayName}
-        profilePic={user.photoURL}
-        message="Good morning!"
-        timestamp="is 20oclock"
-        image="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-      /> */}
     </div>
   );
 }
