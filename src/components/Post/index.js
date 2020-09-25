@@ -1,9 +1,48 @@
 import React from "react";
+import Avatar from "@material-ui/core/Avatar";
+import "./index.scss";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import ThumbUpIcon from "@material-ui/icons/ThumbUpAltOutlined";
+import NearMeIcon from "@material-ui/icons/NearMeOutlined";
+import AccountCircleIcon from "@material-ui/icons/AccountCircleOutlined";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMoreOutlined";
 
 function Post({ profilePic, image, username, timestamp, message }) {
   return (
     <div className="post">
-      <div className="post_top"></div>
+      <div className="post__top">
+        <Avatar className="post__top__avatar" alt={username} src={profilePic} />
+
+        <div className="post__top__info">
+          <h3>{username}</h3>
+          {/* <p>{new Date(timestamp?.toDate()).toUTCString()}</p> */}
+          <p>Timestamp</p>
+        </div>
+      </div>
+      <div className="post__bottom">
+        <p>{message}</p>
+      </div>
+      <div className="post__image">
+        <img src={image} alt="" />
+      </div>
+      <div className="post__options">
+        <div className="post__options__option">
+          <ThumbUpIcon />
+          <p>Like</p>
+        </div>
+        <div className="post__options__option">
+          <ChatBubbleOutlineIcon />
+          <p>Comment</p>
+        </div>
+        <div className="post__options__option">
+          <NearMeIcon />
+          <p>Share</p>
+        </div>
+        <div className="post__options__option">
+          <AccountCircleIcon />
+          <ExpandMoreIcon />
+        </div>
+      </div>
     </div>
   );
 }
