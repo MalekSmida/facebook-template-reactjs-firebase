@@ -5,6 +5,7 @@ import AddPost from "../AddPost";
 import Post from "../Post";
 import { useStateValue } from "../../context/StateProvider";
 import db from "../../firebase";
+import FlipMove from "react-flip-move";
 
 function Feed() {
   const [{ user }, dispatch] = useStateValue();
@@ -24,16 +25,18 @@ function Feed() {
     <div className="feed">
       <StoryReel />
       <AddPost />
-      {posts.map((post) => (
-        <Post
-          key={post.data.id}
-          username={post.data.username}
-          profilePic={post.data.profilePic}
-          message={post.data.message}
-          timestamp={post.data.timestamp}
-          image={post.data.image}
-        />
-      ))}
+      <FlipMove className="feed__flip">
+        {posts.map((post) => (
+          <Post
+            key={post.data.id}
+            username={post.data.username}
+            profilePic={post.data.profilePic}
+            message={post.data.message}
+            timestamp={post.data.timestamp}
+            image={post.data.image}
+          />
+        ))}
+      </FlipMove>
     </div>
   );
 }
