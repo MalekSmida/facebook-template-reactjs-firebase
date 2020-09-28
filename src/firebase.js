@@ -1,14 +1,14 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAbyDA7jbzgJB-IgUBMZxFl7AH6NcxeuZg",
-  authDomain: "facebook-template-fda6a.firebaseapp.com",
-  databaseURL: "https://facebook-template-fda6a.firebaseio.com",
-  projectId: "facebook-template-fda6a",
-  storageBucket: "facebook-template-fda6a.appspot.com",
-  messagingSenderId: "19131686276",
-  appId: "1:19131686276:web:62aae965aa6e3e1e3051d1",
-  measurementId: "G-PWWGTW7VEF",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MESUREMENT_ID,
 };
 
 // connect front and back
