@@ -4,7 +4,7 @@ import StoryReel from "../StoryReel";
 import AddPost from "../AddPost";
 import Post from "../Post";
 import { useStateValue } from "../../context/StateProvider";
-import db from "../../firebase";
+import db from "../../services/firebase";
 import FlipMove from "react-flip-move";
 
 function Feed() {

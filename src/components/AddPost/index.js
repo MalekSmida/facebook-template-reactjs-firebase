@@ -5,7 +5,7 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import "./index.scss";
 import { useStateValue } from "../../context/StateProvider";
-import db from "../../firebase";
+import db from "../../services/firebase";
 import firebase from "firebase";
 
 function AddPost() {
