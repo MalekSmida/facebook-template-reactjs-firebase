@@ -1,9 +1,6 @@
 import React from "react";
 import "./index.scss";
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
-import Feed from "../../components/Feed";
-import Widgets from "../../components/Widgets";
+import { Header, Sidebar, Feed, Widgets } from "../../components";
 
 function Main() {
   return (
