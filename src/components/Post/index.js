@@ -1,11 +1,15 @@
 import React, { forwardRef } from "react";
+
+// node modules
 import Avatar from "@material-ui/core/Avatar";
-import "./index.scss";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import ThumbUpIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import NearMeIcon from "@material-ui/icons/NearMeOutlined";
 import AccountCircleIcon from "@material-ui/icons/AccountCircleOutlined";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMoreOutlined";
+
+// local files
+import "./index.scss";
 
 const Post = forwardRef(
   ({ profilePic, image, username, timestamp, message }, ref) => {

@@ -1,5 +1,6 @@
 import React from "react";
-import "./index.scss";
+
+// node modules
 import HomeIcon from "@material-ui/icons/HomeRounded";
 import OndemandVideoIcon from "@material-ui/icons/OndemandVideoRounded";
 import PeopleIcon from "@material-ui/icons/PeopleRounded";
@@ -10,6 +11,9 @@ import NotificationsIcon from "@material-ui/icons/NotificationsRounded";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDownRounded";
 import SearchIcon from "@material-ui/icons/SearchRounded";
 import { Avatar, IconButton } from "@material-ui/core";
+
+// local files
+import "./index.scss";
 import { useStateValue } from "../../context/StateProvider";
 
 function Header() {

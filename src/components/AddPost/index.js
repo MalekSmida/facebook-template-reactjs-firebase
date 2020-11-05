@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+
+// node modules
 import Avatar from "@material-ui/core/Avatar";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+import firebase from "firebase";
+
+// local files
 import "./index.scss";
 import { useStateValue } from "../../context/StateProvider";
 import db from "../../services/firebase";
-import firebase from "firebase";
 
 function AddPost() {
   const [input, setInput] = useState("");

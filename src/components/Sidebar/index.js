@@ -1,6 +1,6 @@
 import React from "react";
-import "./index.scss";
-import SidebarRow from "../SidebarRow";
+
+// node modules
 import CovidIcon from "@material-ui/icons/FavoriteRounded";
 import FlagOutlinedIcon from "@material-ui/icons/FlagRounded";
 import PeopleAltRoundedIcon from "@material-ui/icons/PeopleAltRounded";
@@ -8,6 +8,10 @@ import ChatIcon from "@material-ui/icons/ChatRounded";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMoreRounded";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
+
+// local files
+import "./index.scss";
+import SidebarRow from "../SidebarRow";
 import { useStateValue } from "../../context/StateProvider";
 
 function Sidebar() {

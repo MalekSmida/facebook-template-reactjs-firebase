@@ -1,4 +1,6 @@
 import React from "react";
+
+// local files
 import "./App.scss";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";

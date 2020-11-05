@@ -1,5 +1,9 @@
 import React from "react";
+
+// node modules
 import Avatar from "@material-ui/core/Avatar";
+
+// local files
 import "./index.scss";
 
 function Story({ image, profileAvatar, title }) {

@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+
+// node modules
+import FlipMove from "react-flip-move";
+
+// local files
 import "./index.scss";
 import StoryReel from "../StoryReel";
 import AddPost from "../AddPost";
 import Post from "../Post";
 import { useStateValue } from "../../context/StateProvider";
 import db from "../../services/firebase";
-import FlipMove from "react-flip-move";
 
 function Feed() {
   const [{ user }, dispatch] = useStateValue();

@@ -1,4 +1,6 @@
 import React from "react";
+
+// local files
 import "./index.scss";
 import Story from "../Story";
 

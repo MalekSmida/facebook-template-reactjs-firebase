@@ -1,6 +1,10 @@
 import React from "react";
-import "./index.scss";
+
+// node modules
 import Avatar from "@material-ui/core/Avatar";
+
+// local files
+import "./index.scss";
 
 function SidebarRow({ src, title, Icon }) {
   return (
