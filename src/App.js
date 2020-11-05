@@ -2,31 +2,15 @@ import React from "react";
 
 // local files
 import "./App.scss";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import Feed from "./components/Feed";
-import Widgets from "./components/Widgets";
-import Login from "./components/Login";
+import { Login, Main } from "./pages";
 import { useStateValue } from "./context/StateProvider";
 
+/**
+ * App component that render Login page, after successful login redirect user to main page
+ */
 function App() {
   const [{ user }, dispatch] = useStateValue();
-  return (
-    <div className="app">
-      {!user ? (
-        <Login />
-      ) : (
-        <>
-          <Header />
-          <div className="app__body">
-            <Sidebar />
-            <Feed />
-            <Widgets />
-          </div>
-        </>
-      )}
-    </div>
-  );
+  return <div className="app">{!user ? <Login /> : <Main />}</div>;
 }
 
 export default App;

@@ -11,6 +11,15 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMoreOutlined";
 // local files
 import "./index.scss";
 
+/**
+ * Post component that appear in feed
+ *
+ * @param {String} profilePic     => user profile picture
+ * @param {String} image          => post img/gif
+ * @param {String} username
+ * @param {Object} timestamp      => post creation date
+ * @param {String} message        => post description
+ */
 const Post = forwardRef(
   ({ profilePic, image, username, timestamp, message }, ref) => {
     return (

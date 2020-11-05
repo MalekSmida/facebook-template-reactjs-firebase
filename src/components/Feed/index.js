@@ -11,10 +11,14 @@ import Post from "../Post";
 import { useStateValue } from "../../context/StateProvider";
 import db from "../../services/firebase";
 
+/**
+ * Feed component that displays Posts
+ */
 function Feed() {
   const [{ user }, dispatch] = useStateValue();
   const [posts, setPosts] = useState([]);
 
+  // fetch posts from firestore when render the component
   useEffect(() => {
     db.collection("posts")
       .orderBy("timestamp", "desc")
@@ -30,9 +34,9 @@ function Feed() {
       <StoryReel />
       <AddPost />
       <FlipMove className="feed__flip">
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <Post
-            key={post.data.id}
+            key={index} //post.data.id
             username={post.data.username}
             profilePic={post.data.profilePic}
             message={post.data.message}

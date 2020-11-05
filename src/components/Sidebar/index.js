@@ -14,6 +14,9 @@ import "./index.scss";
 import SidebarRow from "../SidebarRow";
 import { useStateValue } from "../../context/StateProvider";
 
+/**
+ * displays side bar rows on the left
+ */
 function Sidebar() {
   const [{ user }, dispatch] = useStateValue();
 

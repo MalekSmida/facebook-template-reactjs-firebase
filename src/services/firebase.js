@@ -1,5 +1,6 @@
 import firebase from "firebase";
 
+// firebase configuration
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -13,7 +14,11 @@ const firebaseConfig = {
 
 // connect front and back
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+// connect to firstore
 const db = firebaseApp.firestore();
+
+// use google authentication service
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 

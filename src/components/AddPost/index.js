@@ -12,6 +12,9 @@ import "./index.scss";
 import { useStateValue } from "../../context/StateProvider";
 import db from "../../services/firebase";
 
+/**
+ * create new Post in Feed
+ */
 function AddPost() {
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState("");
@@ -20,6 +23,7 @@ function AddPost() {
   const handleClick = (e) => {
     e.preventDefault();
 
+    // add new collection to firestore
     db.collection("posts").add({
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),

@@ -4,6 +4,9 @@ import React from "react";
 import "./index.scss";
 import Story from "../Story";
 
+/**
+ * displays user stories
+ */
 function StoryReel() {
   return (
     <div className="storyReel">

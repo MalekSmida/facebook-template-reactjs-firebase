@@ -16,6 +16,9 @@ import { Avatar, IconButton } from "@material-ui/core";
 import "./index.scss";
 import { useStateValue } from "../../context/StateProvider";
 
+/**
+ * application header
+ */
 function Header() {
   const [{ user }, dispatch] = useStateValue();
   return (

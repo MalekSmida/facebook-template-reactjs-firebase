@@ -9,6 +9,9 @@ import { auth, provider } from "../../services/firebase";
 import { actionTypes } from "../../context/reducer";
 import { useStateValue } from "../../context/StateProvider";
 
+/**
+ * Login page rendered when open application and asks for authentication using google auth service
+ */
 function Login() {
   const [state, dispatch] = useStateValue();
   const signIn = () => {
@@ -19,7 +22,7 @@ function Login() {
           type: actionTypes.SET_USER,
           user: result.user,
         });
-        console.log(result.user);
+        // console.log(result.user);
       })
       .catch((error) => alert(error.message));
   };
