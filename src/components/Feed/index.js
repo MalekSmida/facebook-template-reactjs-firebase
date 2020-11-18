@@ -18,13 +18,19 @@ function Feed() {
 
   // fetch posts from firestore when render the component
   useEffect(() => {
+    let ignore = false;
     db.collection("posts")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
-        setPosts(
-          snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-        );
+        !ignore &&
+          setPosts(
+            snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+          );
       });
+
+    return () => {
+      ignore = true;
+    };
   }, []);
 
   return (
