@@ -6,7 +6,6 @@ import FlipMove from "react-flip-move";
 // local files
 import "./index.scss";
 import { StoryReel, AddPost, Post } from "../";
-import { useStateValue } from "../../context/StateProvider";
 import db from "../../services/firebase";
 
 /**
