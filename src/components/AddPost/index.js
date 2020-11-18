@@ -23,14 +23,28 @@ function AddPost() {
   const handleClick = (e) => {
     e.preventDefault();
 
+    // validate image url and input text using regexp
+    const urlIsValid =
+      imageUrl !== ""
+        ? /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi.test(
+            imageUrl
+          )
+        : true;
+    const inputIsValid =
+      input !== "" ? /^[a-z0-9\s'\-?!:]+$/gi.test(input) : true;
+
     // add new collection to firestore
-    db.collection("posts").add({
-      message: input,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      profilePic: user.photoURL,
-      username: user.displayName,
-      image: imageUrl,
-    });
+    if (urlIsValid && inputIsValid && (imageUrl !== "" || input !== "")) {
+      db.collection("posts").add({
+        message: input,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        profilePic: user.photoURL,
+        username: user.displayName,
+        image: imageUrl,
+      });
+    } else {
+      alert("Unvalid input!");
+    }
 
     setInput("");
     setImageUrl("");
