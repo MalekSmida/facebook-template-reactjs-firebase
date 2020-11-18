@@ -13,23 +13,30 @@ import db from "../../services/firebase";
  * Feed component that displays Posts
  */
 function Feed() {
-  const [{ user }, dispatch] = useStateValue();
   const [posts, setPosts] = useState([]);
+  const [error, setError] = useState();
 
   // fetch posts from firestore when render the component
   useEffect(() => {
     let ignore = false;
-    db.collection("posts")
+    let unsubscribe = db
+      .collection("posts")
       .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) => {
-        !ignore &&
-          setPosts(
-            snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-          );
-      });
+      .onSnapshot(
+        (snapshot) => {
+          !ignore &&
+            setPosts(
+              snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+            );
+        },
+        (err) => {
+          setError(err);
+        }
+      );
 
     return () => {
       ignore = true;
+      unsubscribe();
     };
   }, []);
 
